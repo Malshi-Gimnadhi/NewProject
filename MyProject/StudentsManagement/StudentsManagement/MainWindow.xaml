@@ -1,0 +1,67 @@
+﻿<Window x:Class="StudentsManagement.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:StudentsManagement"
+    mc:Ignorable="d"
+    Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="/Images/Student.jpg" />
+    </Window.Background>
+    <Window.Resources>
+        <Style x:Key="Semibutten" TargetType="Button">
+            <Setter Property="Width" Value="150" />
+            <Setter Property="Height" Value="30" />
+            <Setter Property="Margin" Value="0,10,0,0" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="Background" Value="Wheat" />
+            <Setter Property="Foreground" Value="Black" />
+            <Setter Property="BorderBrush" Value="DarkGray" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Padding" Value="5" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                      VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="LightBlue" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <StackPanel Height="274" Margin="0,0,459,10" Width="NaN" VerticalAlignment="Bottom" RenderTransformOrigin="0.468,-0.479">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="40">
+                <TextBlock Text="PMT College" FontSize="40" FontWeight="Heavy" Foreground="DarkSlateBlue"></TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="40">
+                <Button Content="Login to the System"  Style="{StaticResource Semibutten}" VerticalAlignment="Bottom" RenderTransformOrigin="-0.115,8.663" Padding="10" FontSize="20" FontWeight="Bold" Click="Button_Click" Width="247" Height="50" BorderBrush="Black" BorderThickness="3"/>
+            </StackPanel>
+
+        </StackPanel>
+        <StackPanel Height="227" Margin="0,0,459,10" Width="NaN" VerticalAlignment="Bottom">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="40">
+                <TextBlock Text="Always be with your future" Width="142"/>
+            </StackPanel>
+        </StackPanel>
+
+
+        <Image Source="E:\StudentsManagement\StudentsManagement\Images" HorizontalAlignment="Center" VerticalAlignment="Center" />
+    </Grid>
+
+</Window>

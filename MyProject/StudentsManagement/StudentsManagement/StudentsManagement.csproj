@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\1.png" />
+    <None Remove="Images\2.png" />
+    <None Remove="Images\3.png" />
+    <None Remove="Images\4.png" />
+    <None Remove="Images\5.png" />
+    <None Remove="Images\admin.png" />
+    <None Remove="Images\student.jpg" />
+    <None Remove="LoginPage.xaml~RF14a441b6.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0" />
+    <PackageReference Include="MahApps.Metro.IconPacks" Version="4.11.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.SqlServer.Server" Version="1.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\1.png" />
+    <Resource Include="Images\2.png" />
+    <Resource Include="Images\3.png" />
+    <Resource Include="Images\4.png" />
+    <Resource Include="Images\5.png" />
+    <Resource Include="Images\admin.png" />
+    <Resource Include="Images\student.jpg" />
+  </ItemGroup>
+
+</Project>
